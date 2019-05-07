@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/slhodak/csv-report/issues"
   },
-  "homepage": "https://github.com/slhodak/csv-report#readme"
+  "homepage": "https://github.com/slhodak/csv-report#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
