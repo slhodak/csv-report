@@ -4,8 +4,8 @@
   "description": "generate a csv-formatted report from json inputs",
   "main": "server.js",
   "scripts": {
-    "test": "nodemon server.js",
-    "start": "node server.js"
+    "test": "nodemon ./server/server.js",
+    "start": "node ./server/server.js"
   },
   "repository": {
     "type": "git",

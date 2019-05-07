@@ -12,3 +12,10 @@ Goals
 - Client to receive a response containing a csv-formatted result
 - no external libraries for generating reports
 - no jquery/ajax
+
+
+Returning the form
+- GET the form index page and send it back???
+  - Like have the form hosted to start with
+    - This should probably be true anyway
+    
