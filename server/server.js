@@ -9,22 +9,20 @@ const fs = require('fs');
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-// const multer = require('multer');
-// app.use(bodyParser.json());
-// const upload = multer(); 
 const formidable = require('express-formidable');
+const csv = require('./csv');
 app.use(formidable());
+app.use(express.static(path.join(__dirname, path.normalize('../public'))));
 
 app.listen(3000);
-// app.use(upload.none());
-app.use(express.static(path.join(__dirname, path.normalize('../public'))));
+
 
 app.post('/', (req, res, next) => {  
   console.log(req.fields);
   fs.readFile(path.join(__dirname, path.normalize('../public/index.html')), (err, data) => {
     if (!err) {
       res.status(200);
-      let template = '<p>' + req.fields + '</p>';
+      let template = '<p>' + req.fields.json + '</p>';
       res.end(data + template);
     } else {
       res.status(404);
