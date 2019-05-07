@@ -8,6 +8,8 @@
 const express = require('express');
 const app = express();
 
-app.post('/giveMeJson', (req, res) => {
+app.listen(3000);
 
+app.post('/giveMeJson', (req, res) => {
+  res.status(200).send(req.body);
 });
