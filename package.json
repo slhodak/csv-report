@@ -1,0 +1,25 @@
+{
+  "name": "csv-report",
+  "version": "1.0.0",
+  "description": "generate a csv-formatted report from json inputs",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slhodak/csv-report.git"
+  },
+  "keywords": [
+    "csv",
+    "json",
+    "express"
+  ],
+  "author": "Sam Hodak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slhodak/csv-report/issues"
+  },
+  "homepage": "https://github.com/slhodak/csv-report#readme"
+}
