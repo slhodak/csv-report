@@ -18,4 +18,9 @@ Returning the form
 - GET the form index page and send it back???
   - Like have the form hosted to start with
     - This should probably be true anyway
-    
+- Template system
+  - Modify HTML file by inserting CSV into it
+  - Return html file. Form on top, csv on bottom
+- In the async call of sendFile, send a response... ?? appended
+
+
