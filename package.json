@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/slhodak/csv-report#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "express-formidable": "^1.2.0"
   }
 }

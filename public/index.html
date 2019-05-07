@@ -8,8 +8,9 @@
 </head>
 <body>
   <!-- form with textarea for json text to submit data -->
-  <form action="http://127.0.0.1:3000/giveMeJson" method="POST">
-    <textarea></textarea>
+  <form action="http://127.0.0.1:3000/" method="POST">
+    <label for="json">JSON:</label>
+    <textarea type="text" name="json" id="json" enctype="multipart/form-data"></textarea>
     <input type="submit">
   </form>
   
