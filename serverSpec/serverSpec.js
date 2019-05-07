@@ -1,27 +1,12 @@
 const csv = require('../server/csv');
-const exampleData = require('../exampleData');
 
 const testSuite = {
   runAllTests: function() {
-    testSuite.testGetAllKeys();
-    testSuite.testDFCollect();
     testSuite.testJSONtoCSV();
-  },
-  testGetAllKeys: function() {
-    let actual = csv.getAllKeys(exampleData);
-    let expected = ['firstName', 'lastName', 'county', 'city', 'role', 'sales'];
-    console.log(actual);
-    console.log(expected);
-    console.assert((actual == expected), 'should list all keys from all levels of input json');
-  },
-  testDFCollect: function() {
-    console.log('should collect all key value pairs, depth-first');
-    let actual = csv.DFCollect(exampleData);
-    console.log(actual);
   },
   testJSONtoCSV: function() {
     console.log('should convert JSON to csv');
-    let actual = csv.jsonToCSV(exampleData);
+    let actual = csv.jsonToCSV('{ "firstName": "Joshie", "lastName": "Wyattson", "county": "San Mateo", "city": "San Mateo", "role": "Broker", "sales": 1000000, "children": [ { "firstName": "Beth Jr.", "lastName": "Johnson", "county": "San Mateo", "city": "Pacifica", "role": "Manager", "sales": 2900000, "children": [ { "firstName": "Smitty", "lastName": "Won", "county": "San Mateo", "city": "Redwood City", "role": "Sales Person", "sales": 4800000, "children": [] }, { "firstName": "Allen", "lastName": "Price", "county": "San Mateo", "city": "Burlingame", "role": "Sales Person", "sales": 2500000, "children": [] } ] }, { "firstName": "Beth", "lastName": "Johnson", "county": "San Francisco", "city": "San Francisco", "role": "Broker/Sales Person", "sales": 7500000, "children": [] } ] };');
     console.log(actual);
   }
 }
